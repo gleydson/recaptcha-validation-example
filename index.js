@@ -11,6 +11,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
+app.get('/', (req, res) => {
+  return res.send('hello')
+})
+
 app.post('/subscribe', async (req, res) => {
   const { captcha } = req.body
   if (captcha === null || captcha === undefined || captcha === '') {
