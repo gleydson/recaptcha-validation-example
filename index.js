@@ -48,6 +48,6 @@ app.post('/subscribe', async (req, res) => {
   })
 })
 
-http.createServer(app).listen(3333, function () {
+http.createServer(app).listen(process.env.PORT || 3333, function () {
   console.log('Server started on port 3333')
 })
